@@ -21,6 +21,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class Login extends JFrame {
 
@@ -51,28 +52,35 @@ public class Login extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(153, 255, 204));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Nick");
-		lblNewLabel.setBounds(88, 70, 46, 14);
+		JLabel lblNewLabel = new JLabel("Nick:");
+		lblNewLabel.setFont(new Font("Sitka Text", Font.PLAIN, 18));
+		lblNewLabel.setBounds(55, 88, 79, 14);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Contrase\u00F1a");
-		lblNewLabel_1.setBounds(88, 111, 78, 14);
+		JLabel lblNewLabel_1 = new JLabel("Contrase\u00F1a:");
+		lblNewLabel_1.setFont(new Font("Sitka Text", Font.PLAIN, 18));
+		lblNewLabel_1.setBounds(55, 134, 111, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		txtnick = new JTextField();
-		txtnick.setBounds(176, 67, 146, 20);
+		txtnick.setBackground(new Color(255, 255, 255));
+		txtnick.setBounds(176, 86, 146, 20);
 		contentPane.add(txtnick);
 		txtnick.setColumns(10);
 		
 		txtpass = new JPasswordField();
-		txtpass.setBounds(176, 108, 146, 20);
+		txtpass.setBackground(new Color(255, 255, 255));
+		txtpass.setBounds(176, 132, 146, 20);
 		contentPane.add(txtpass);
 		
 		JButton btningresar = new JButton("Ingresar");
+		btningresar.setFont(new Font("Sitka Text", Font.PLAIN, 14));
+		btningresar.setBackground(Color.BLACK);
 		btningresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -156,10 +164,12 @@ public class Login extends JFrame {
 			
 			}
 		});
-		btningresar.setBounds(163, 160, 111, 28);
+		btningresar.setBounds(158, 188, 111, 28);
 		contentPane.add(btningresar);
 		
 		JButton btnNewButton_1 = new JButton("Ir a registrar");
+		btnNewButton_1.setFont(new Font("Sitka Text", Font.PLAIN, 14));
+		btnNewButton_1.setBackground(Color.BLACK);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -170,12 +180,12 @@ public class Login extends JFrame {
 			
 			
 		});
-		btnNewButton_1.setBounds(303, 227, 106, 23);
+		btnNewButton_1.setBounds(303, 227, 121, 23);
 		contentPane.add(btnNewButton_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Login");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		lblNewLabel_2.setBounds(176, 11, 146, 45);
+		JLabel lblNewLabel_2 = new JLabel("LOGIN");
+		lblNewLabel_2.setFont(new Font("Rockwell", Font.PLAIN, 27));
+		lblNewLabel_2.setBounds(161, 21, 95, 28);
 		contentPane.add(lblNewLabel_2);
 	}
 }
