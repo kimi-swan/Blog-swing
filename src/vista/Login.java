@@ -130,9 +130,7 @@ public class Login extends JFrame {
 				} catch (Exception e2) {
 					e2.printStackTrace();
 				}
-				
-				
-				
+
 				Panel pnl=new Panel();
 				pnl.setVisible(true);
 				
