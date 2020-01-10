@@ -56,6 +56,8 @@ public class Panel extends JFrame {
 		
 		lblbienvenido.setText("Bienvenido " + nombre +" "+ apellido);
 		
+		
+		
 	}
 
 }
