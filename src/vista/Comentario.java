@@ -6,13 +6,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import beans.Usuario;
-
 import javax.swing.JLabel;
-import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
 
-public class Panel extends JFrame {
+public class Comentario extends JFrame {
 
 	private JPanel contentPane;
 
@@ -23,7 +21,7 @@ public class Panel extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Panel frame = new Panel();
+					Comentario frame = new Comentario();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +33,7 @@ public class Panel extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Panel() {
+	public Comentario() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -43,22 +41,20 @@ public class Panel extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblbienvenido = new JLabel("New label");
-		lblbienvenido.setBounds(5, 5, 424, 14);
-		contentPane.add(lblbienvenido);
+		JLabel lblNewLabel = new JLabel("Ingrese su nuevo comentario:");
+		lblNewLabel.setBounds(21, 26, 162, 14);
+		contentPane.add(lblNewLabel);
 		
+		JTextArea txacomentario = new JTextArea();
+		txacomentario.setBounds(52, 51, 324, 136);
+		contentPane.add(txacomentario);
 		
-		String nombre;
-		String apellido;
+		JButton btnvolver = new JButton("Volver al Panel");
+		btnvolver.setBounds(21, 215, 110, 23);
+		contentPane.add(btnvolver);
 		
-		Usuario usu=new Usuario();
-		
-		nombre=usu.getNombre();
-		apellido=usu.getApellido();
-		
-		lblbienvenido.setText("Bienvenido " + nombre +" "+ apellido);
-		
-		
-		
+		JButton btnaceptar = new JButton("Aceptar");
+		btnaceptar.setBounds(319, 215, 89, 23);
+		contentPane.add(btnaceptar);
 	}
 }
